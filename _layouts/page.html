@@ -11,3 +11,23 @@ layout: default
   </div>
 
 </article>
+
+<body>
+  <!-- Gitalk is a modern comment component based on GitHub Issue and Preact. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+      const gitalk = new Gitalk({
+          clientID: '8c6510ff8710e718e6b2',
+          clientSecret: '246b787e568b54b301e131f4479d8ec18299a66c',
+          repo: 'DP-Book',      // The repository of store comments
+          owner: 'OFShare',
+          admin: ['OFShare'],
+          id: 'OFShare.blog.comment',      // Ensure uniqueness and length less than 50
+          distractionFreeMode: true    // Facebook-like distraction free mode
+      })
+      gitalk.render('gitalk-container')
+  </script>
+</body>
